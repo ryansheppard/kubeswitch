@@ -1,10 +1,9 @@
 use anyhow::Result;
-use std::io::Cursor;
 use skim::prelude::*;
+use std::io::Cursor;
 
 pub fn handle_skim(input: String) -> Result<Option<String>> {
     let options = SkimOptionsBuilder::default()
-        .height(String::from("50%"))
         .no_multi(true)
         .build()
         .unwrap();
